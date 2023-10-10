@@ -2,9 +2,24 @@ class ComplexNumber {
     private final double real;
     private final double imaginary;
 
+    public static void main(String[] args){
+        var cn = new ComplexNumber(4,8);
+        var a = toString(cn);
+        System.out.print(a);
+    }
+
     public ComplexNumber(final double real, final double imaginary) {
         this.real = real;
         this.imaginary = imaginary;
+    }
+
+    public String toString(cn){
+        var convNum = "";
+        convNum += cn.real.toString();
+        convNum += " + ";
+        convNum += cn.imaginary.toString();
+
+        return convNum;
     }
 
     public double getImaginary() {
